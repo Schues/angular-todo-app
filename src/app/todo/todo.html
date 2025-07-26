@@ -1,0 +1,23 @@
+<div class="todo-container">
+  <div class="input-group">
+    <input 
+      type="text" 
+      [(ngModel)]="newTodo" 
+      placeholder="新しいタスクを入力してください..." 
+      class="todo-input"
+      (keyup.enter)="addTodo()"
+      (keypress)="onKeyPress($event)">
+    <button (click)="addTodo()" class="add-button">追加</button>
+  </div>
+
+  <ul class="todo-list" *ngIf="todos.length > 0">
+    <li class="todo-item" *ngFor="let todo of todos; let i = index">
+      <span class="todo-text">{{ todo }}</span>
+      <button (click)="removeTodo(i)" class="remove-button">削除</button>
+    </li>
+  </ul>
+
+  <div class="empty-state" *ngIf="todos.length === 0">
+    <p>まだタスクがありません。新しいタスクを追加してください！</p>
+  </div>
+</div>

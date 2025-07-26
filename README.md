@@ -1,59 +1,56 @@
-# AngularTodoApp
+# Todo アプリ
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+このプロジェクトは、Angular 20を使用して作成されたモダンなTodoアプリケーションです。
 
-## Development server
+## 機能
 
-To start a local development server, run:
+- ✅ タスクの追加
+- ✅ タスクの削除
+- ✅ 美しいUI/UX
+- ✅ レスポンシブデザイン
+- ✅ Enterキーでのタスク追加
+- ✅ 空の状態の表示
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 開発サーバーの起動
 
 ```bash
-ng generate component component-name
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+アプリケーションは `http://localhost:4200/` で起動します。
+
+## ビルド
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
-
-To build the project run:
+## テスト
 
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 技術スタック
 
-## Running unit tests
+- Angular 20
+- TypeScript
+- CSS3 (カスタムスタイリング)
+- HTML5
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## プロジェクト構造
 
-```bash
-ng test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+src/
+├── app/
+│   ├── todo/
+│   │   ├── todo.ts          # Todoコンポーネント
+│   │   ├── todo.html        # Todoテンプレート
+│   │   └── todo.css         # Todoスタイル
+│   ├── app.ts               # メインアプリコンポーネント
+│   ├── app.html             # アプリテンプレート
+│   ├── app.css              # アプリスタイル
+│   └── app.config.ts        # アプリ設定
+├── main.ts                  # アプリケーションエントリーポイント
+└── index.html               # メインHTMLファイル
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
